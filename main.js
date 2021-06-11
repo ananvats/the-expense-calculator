@@ -36,14 +36,16 @@ function addExpenseToTotal() {
 
 
     const allExpenseHTML = allExpenses.map(expense => {
-        return `<div> ${expense.amount} :: 4{expense.desc} </div>`
+        return `<div> ${expense.amount} :: ${expense.desc} </div>`
     });
     
 
-    const joinedAllExpenseHTML = allExpenseHTML.join();
+    const joinedAllExpenseHTML = allExpenseHTML.join("");
 
 
-    console.log(allExpenseHTML);
+    console.log(joinedAllExpenseHTML);
+
+    expenseTableEl.innerHTML= joinedAllExpenseHTML;
 
 
 
