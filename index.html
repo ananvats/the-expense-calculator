@@ -5,57 +5,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Expense</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous">
+    </script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
+    <title>Personal Expense</title>
 </head>
 
 
 <body>
-  
-
-        <nav class="navbar navbar-dark bg-dark">
-			<span class="navbar-brand mb-0 h1">Xpenstor</span>
-		</nav>
-
-		<div class="container-fluid bg-light" style="min-height: 100vh">
-            <h1 id="headingTotal" style="color: black;">0</h1>
-			<div class="container">
-				<div class="jumbotron mt-4">
-					<div class="input-group mb-3">
-						<input
-							type="text"
-                            id="inputAmount"
-							class="form-control"
-							placeholder="How much did you pay?"
-							aria-label="How much did you pay?"
-							aria-describedby="in rupee"
-						/>
-						<div class="input-group-append">
-							<span class="input-group-text" id="in rupee">₹</span>
-						</div>
-					</div>
-					<div class="input-group mb-3">
-						<div class="input-group-prepend">
-							<span class="input-group-text" id="spent at">@</span>
-						</div>
-						<input
-							type="text"
-                            id="inputDesc"
-							class="form-control"
-							placeholder="What did you purchase?"
-							aria-label="What did you purchase?"
-							aria-describedby="spent at"
-						/>
-                        <div class="input-group-append">
-							<button id="btn-counter" class="btn btn-outline-dark" type="button" id="button-addon2">Add</button>
-						</div>
-					</div>
-				</div>
 
 
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1" style="padding: .5rem;">Xpenstor</span>
+        <span id="headingTotal" class="navbar-brand mb-0 h1" style="padding: .5rem;"></span>
+    </nav>
 
+    <div class="container-fluid bg-light" style="min-height: 100vh">
+        <div class="container">
+            <div class="jumbotron mt-4">
+                <div class="input-group mb-3">
+                    <input type="text" id="inputAmount" class="form-control" placeholder="How much did you pay?"
+                        aria-label="How much did you pay?" aria-describedby="in rupee" />
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="in rupee">₹</span>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="spent at">@</span>
+                    </div>
+                    <input type="text" id="inputDesc" class="form-control" placeholder="What did you purchase?"
+                        aria-label="What did you purchase?" aria-describedby="spent at" />
+                    <div class="input-group-append">
+                        <button id="btn-counter" class="btn btn-outline-dark" type="button"
+                            id="button-addon2">Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <ul class="list-group" id="expenseTable">
+
+                </ul>
+            </div>
 
             <table class="table table-dark table-striped">
                 <div id="expenseTable"></div>
